@@ -14,7 +14,7 @@
 4. How do I log out?
 2. Why would I want to log in?
 
-### Admin Users
+### Staff
 1. The Admin Site
 2. Connecting your user to a Person object
 3. User permissions
@@ -25,6 +25,7 @@
 2. Apis to get user state
 3. User action tracking (listen/view)
 4. Comment and Person FKs
+
 1. Logged In Users
 	+ Registration
 	+ Authentication
@@ -48,6 +49,24 @@
 2. Dev Guide - There is so little here, I don't know where to start 
 
 # CMS
+
+### Product
++ What is the Puppy Project?
+    + CMS
+        - Stories
+        - Channels
+        - RSS
+    + Touts
+        - Bucketslots
+        - Buckets
+        - Touts
+    + Crowdsourcing
+    + Comments
+    + NPR Ingest
+    + Images
+    + Audio Processing
+### Staff
+### Developers
 ## Key Concepts
 Hi: What are these containers, how do they relate to on air content, what flexibility do they provide our admin users?
 Mid : Describe admin functionality
