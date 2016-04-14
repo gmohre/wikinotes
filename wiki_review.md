@@ -2,24 +2,30 @@
 ## Key Features
 
 + Mid : What are the differences between a visitor and a staff user. Permission groups. Connecting a Person to your user.
-    + Hi: What does being a logged in User allow you to do? What does it enable in our system?
++ Hi: What does being a logged in User allow you to do? What does it enable in our system?
 
 + Lo: User model, different tracking methods, apis available.
 
 ### Product
-
-1. How can I log in ? 
-2. How can I register? 
-3. How can I change my user properties?
-4. How do I log out?
-5. Why would I want to log in?
+1. Why would I want to log in?
     1. Comments
+        - comments gif
     2. Crowdsourcing
+        - sweet map interaction gif
     3. Discover
+        - sweet discover gif
     4. Cms Census?
     5. Pledge Free Stream
-    6. Email This (Proto Social Sharing :3)
+        - pledge free language
+    6. Email This (Proto Social Sharing :3)    
+        - discuss social features on a larger scale?
+2. How can I log in ? 
+    - login button animation
+3. How can I register? 
+    - registration animation
+4. How can I change my user properties?
     
+5. How do Ido  log out?
 
 ### Staff
 1. The Admin Site
@@ -34,6 +40,9 @@
 
 #### Kennel
 1. User Model
+    - FK references
+        + ManagedItem.creator ('created_items')
+        + MangedItem.last_editor ('edited_items')
 2. Apis to get user state
 3. User action tracking (listen/view)
 4. Comment and Person FKskennel
@@ -63,7 +72,29 @@
 	+ Force Password Refresh for Staff Users
 	+ Pledge Goal
 	+ Overrides Admin Redirect View django.contrib.redirects.models.Redirect
-	
+	+ Decorators
+	   - user_passes_test decorator to control per-view access
+	   - puppysite/puppy/util/basicauth.py 
+	   - puppy/cms/views/shows.py:upcoming - Manager is selected on request.user.is_staff
+	+ CMS Admin
+	   - Many CMS Admin classes utilize request.user and user groups to control flow / attribution (creator/last_editor)in ManagedItem FKs
+	+ Middleware
+	   - EnvironUserMiddleware sets request.environ['django_username key'] to request.user.username if user && user.is_authenticated
+	  
+	+ Jobs
+	   - scripts/compute_email_hash_for_existing_users.py  
+	       + Updates UserData for all users
+	   - scripts/ffsupdate.py
+	   - scripts/report_weekly_data.py
+	   - scripts/remove_unusable_sessions.py 
+	   - scripts/import_archives.py 
+	   - scripts/user_email_migration.py 
+
++ DummyUser
+    - puppy/util/djview.py 
+
+
+
 6. Anonymous Users
 	1. Uses browser_id for tracking
 	2. Requires Email and Name for commenting
@@ -128,3 +159,4 @@ Lo: Describe models, apis, view structure, request stack.
 3. Homepage Preview
 4. Why is there TaggingAdmin in Kennel? 
 5. Hub?
+6. Profile Middleware
