@@ -8,24 +8,37 @@
 
 ### Product
 1. Why would I want to log in?
+    Hello, feel welcome to explore WNYC.org
     1. Comments
-        - comments gif
+        - For logged-in users, we pre-populate the required comment fields, allowing for a seamless route to interacting with our content.
+        - To facilitate continued conversations we aggregate all of your comments on your user profile page.
+        - [[comments gif]]
     2. Crowdsourcing
-        - sweet map interaction gif
+        - Some of our Crowdsourcing Surveys require a user to log in, to prevent distorted results.
+        - [[sweet map interaction gif]]
     3. Discover
-        - sweet discover gif
+        - Track Listen Actions
+            + By logging in, your interactions with our audio content is tracked, and we utilize this data to help you Discover new content.
+        - [[sweet discover gif]]
     4. Cms Census?
     5. Pledge Free Stream
         - pledge free language
     6. Email This (Proto Social Sharing :3)    
         - discuss social features on a larger scale?
 2. How can I log in ? 
-    - login button animation
+    - In our header, we provide links for login and once logged-in, a users profile page.
+    - [[sweet login button animation]]
 3. How can I register? 
-    - registration animation
+    - We provide a link to the registration form at our login page, requiring three fields:
+        + Display Name
+        + Email Address
+        + Password
+    - The registration form presents an opportunity to connect a User with our newsletter through an opt-in checkbox. 
+    - [[swee registration animation]]
 4. How can I change my user properties?
-    
-5. How do Ido  log out?
+    - Clicking on your username in the upper right hand corner of WNYC.org will send you to your profile page, where you can updated your profile
+5. How do I log out?
+    - As a logged in User, the login button is replaced with a logout button.
 
 ### Staff
 1. The Admin Site
