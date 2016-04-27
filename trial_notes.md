@@ -18,3 +18,18 @@
 |                             |                     |                               | beta_1                                                          | None         |                              |                                   |                     | beta_1 trial json      |              |
 |                             |                     |                               | beta_1                                                          | beta_1=True  | False                        |                                   |                     |                        | None         |
 |                             |                     |                               |                                                                 |              |                              |                                   |                     |                        |              |
+
+
+
+| function                         | Cookie State         | request.get            | Site | active trial for site  | active trial cachekey | data modified                                           | route modified   |
+|----------------------------------|----------------------|------------------------|------|------------------------|-----------------------|---------------------------------------------------------|------------------|
+| TrialMiddleware.process_response |                      |                        |      |                        |                       |                                                         |                  |
+|                                  | None                 | n/a                    | 1    |  id = 5                | active_trial_1        | request.active_trial_data = active_trial_1.to_jsonapi() | none             |
+|                                  | active_trial_1=True  | n/a                    | 1    | ""                     | ""                    | request.active_trial_data = {}                          | redirect to beta |
+|                                  | active_trial_1=False | n/a                    | 1    | ""                     | ""                    | ""                                                      | None             |
+| TrialMiddleware.process_request  |                      |                        |      |                        |                       |                                                         |                  |
+|                                  | n/a                  | {}                     | 1    | ""                     | ""                    | None                                                    | None             |
+|                                  | ""                   | {active_trial_1=True}  | 1    | ""                     | ""                    | response.set_cookie(active_trial_1, True)               |                  |
+|                                  | ""                   | {active_trial_1=False} | 1    | ""                     | ""                    | response.set_cookie(active_trial_1, False)              |                  |
+|                                  |                      |                        |      |                        |                       |                                                         |                  |
+|                                  |                      |                        |      |                        |                       |                                                         |                  |
