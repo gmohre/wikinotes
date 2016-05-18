@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>270</y>
+      <w>570</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+cms.Serializers.ShowSerializer
+--
+type: "Show"
+id: obj.pk
+--
+relationships
+-logoImage : show.image.to_jsondata_handlebars()
+-produingOrganization: show.producing_organizations.to_jsondata_handlebars()
+--
+attributes
+title: show.title
+slug: show.slug
+tease:show.tease
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>30</y>
+      <w>570</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+cms.Serializers.MinShowSerializers
+--
+type: "Show"
+id: obj.pk
+--
+relationships
+-logoImage : show.image.to_jsondata_handlebars()
+-produingOrganization: show.producing_organizations.to_jsondata_handlebars()
+--
+attributes
+title: show.title
+slug: show.slug
+tease:show.tease
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
