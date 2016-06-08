@@ -20,10 +20,9 @@
         - Track Listen Actions
             + By logging in, your interactions with our audio content is tracked, and we utilize this data to help you Discover new content.
         - [[sweet discover gif]]
-    4. Cms Census?
-    5. Pledge Free Stream
+    4. Pledge Free Stream
         - pledge free language
-    6. Email This (Proto Social Sharing :3)    
+    5. Email This (Proto Social Sharing :3)    
         - discuss social features on a larger scale?
 2. How can I log in ? 
     - In our header, we provide links for login and once logged-in, a users profile page.
@@ -34,7 +33,7 @@
         + Email Address
         + Password
     - The registration form presents an opportunity to connect a User with our newsletter through an opt-in checkbox. 
-    - [[swee registration animation]]
+    - [[sweet registration animation]]
 4. How can I change my user properties?
     - Clicking on your username in the upper right hand corner of WNYC.org will send you to your profile page, where you can updated your profile
 5. How do I log out?
@@ -53,12 +52,15 @@
 
 #### Kennel
 1. User Model
+    - [django.contrib.auth.User](https://docs.djangoproject.com/es/1.9/ref/contrib/auth/)
     - FK references
         + ManagedItem.creator ('created_items')
         + MangedItem.last_editor ('edited_items')
-2. Apis to get user state
-3. User action tracking (listen/view)
-4. Comment and Person FKskennel
+        + Comment and Person FKskennel
+        + [Visual](http://visualofmodel.png)   
+2. API
+    - [User Logged-In State](https://wiki2.wnyc.org/index.php?title=Identity:API_Reference)
+    - [User Action Tracking](https://wiki2.wnyc.org/index.php?title=Identity:API_Reference#Tracking)
 5. Logged In Users - Kennel application
 	+ Registration
 	+ Authentication
@@ -72,7 +74,7 @@
 	+ Recommendation
 	   - API
     	   + Listen Actions
-    + Oemed
+    + Oembed
         - User Perms Verification
     + NPR
         - Special NPR user to associate with NPRArticles
@@ -173,3 +175,4 @@ Lo: Describe models, apis, view structure, request stack.
 4. Why is there TaggingAdmin in Kennel? 
 5. Hub?
 6. Profile Middleware
+7. Cms Census?
