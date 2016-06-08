@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>290</y>
+      <w>490</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>discover.Serializers.TopicSerializer
+type:"topics"
+--
+Data
+
+id:Linkroll.id
+--
+Attributes
+
+topics: [LinkRollLink.to_jsondata for LinkRollLink in LinkRoll.link_set]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
