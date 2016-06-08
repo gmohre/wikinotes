@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>340</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Slot
+--
+Data
+--
+type: "BucketSlot"
+id: bucketslot.pk</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>50</y>
+      <w>470</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>touts.Serializers.BucketSerializer
+--
+Data
+--
+type: "Bucket"
+id: bucket.pk
+--
+Attributes
+--
+slug
+title
+bucketItems:[item.to_jsondata_handlebars() for item in bucket]
+--
+Relationships
+--
+slot
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>270</y>
+      <w>130</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;relationship&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

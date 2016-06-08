@@ -4,24 +4,29 @@
     <id>UMLClass</id>
     <coordinates>
       <x>60</x>
-      <y>270</y>
-      <w>570</w>
-      <h>210</h>
+      <y>280</y>
+      <w>640</w>
+      <h>370</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
-cms.Serializers.ShowSerializer
+    <panel_attributes>cms.Serializers.ShowSerializer
+extends MinShowSerializer
 --
-type: "Show"
-id: obj.pk
+Attributes
 --
-relationships
--logoImage : show.image.to_jsondata_handlebars()
--produingOrganization: show.producing_organizations.to_jsondata_handlebars()
---
-attributes
-title: show.title
-slug: show.slug
-tease:show.tease
+linkroll
+about
+description
+featured
+scheduleSummary
+podcastLinks
+editLink
+rssFeed
+listingObjectType
+marqueeImage : show.marquee_image.to_jsondata_handlebars()
+url: show.get_absolute_url()
+donateChunk: self.get_donate_chunk(show)
+sidebarChunks: self.get_sidebar_chunks(show)
+bgColor:show.channel_bg_color
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -29,24 +34,22 @@ tease:show.tease
     <id>UMLClass</id>
     <coordinates>
       <x>60</x>
-      <y>30</y>
+      <y>40</y>
       <w>570</w>
       <h>210</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
-cms.Serializers.MinShowSerializers
+    <panel_attributes>cms.Serializers.MinShowSerializer
 --
 type: "Show"
-id: obj.pk
+id: show.pk
 --
-relationships
--logoImage : show.image.to_jsondata_handlebars()
--produingOrganization: show.producing_organizations.to_jsondata_handlebars()
+Attributes
 --
-attributes
-title: show.title
-slug: show.slug
-tease:show.tease
+title
+slug
+tease
+logoImage : show.image.to_jsondata_handlebars()
+producingOrganization: show.producing_organizations.to_jsondata_handlebars()
 </panel_attributes>
     <additional_attributes/>
   </element>
