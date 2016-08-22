@@ -1,4 +1,4 @@
-Reinforcement Learning Cycles
+#Reinforcement Learning
 
 ## RL Goal 
 * Select actions to maximize total future reward.
