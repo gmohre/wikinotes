@@ -4,8 +4,8 @@
 * Select actions to maximize total future reward.
 
 ## RL Agent Taxonomies
-* Value Based -> has Value Function v(s) implicitly No Policy (note)
-* Policy Based -> represent Policy using a data structure. no v(s) (emotion)
+* Value Based -> has Value Function v(s) implicitly has no Policy (note??)
+* Policy Based -> represent Policy using a data structure. no v(s) (emotion??
 * Actor Critic -> P + v(s) (IDK)
 * Model Free -> P and or v(s), no model, P or v(s) based on EXP
 * Model Based -> P and or v(s) build dynamics model, do lookaheads.
